@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* LAYOUT */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-width: 1280px;
+    float: left;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+/* LAYOUT */
+
+/* COMMON */
+.no-margin-t{
+    margin-top: 0px;
+}
+
+.no-margin-b{
+    margin-bottom: 0px;
+}
+
+.no-margin-l{
+    margin-left: 0px;
+}
+
+.no-margin-r{
+    margin-right: 0px;
+}
+
+.margin-xs-t{
+    margin-top: 5px;
+}
+
+.margin-xs-b{
+    margin-bottom: 5px;
+}
+
+.margin-xs-l{
+    margin-left: 5px;
+}
+
+.margin-xs-r{
+    margin-right: 5px;
+}
+
+.margin-sm-t{
+    margin-top: 10px;
+}
+
+.margin-sm-b{
+    margin-bottom: 10px;
+}
+
+.margin-sm-l{
+    margin-left: 10px;
+}
+
+.margin-sm-r{
+    margin-right: 10px;
+}
+/* COMMON */
+
+/* CLASSES */
+.app-container{
+    overflow: auto;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.content-container{
+    min-height: 350px;
+    height: calc(100% - 145px); /* 145 is 120 from the footer plus the 25 from the margin top the same footer has */
+}
+
+.content-section{
+    padding: 10px;
+}
+/* remove margin-left:auto and margin-right:auto if we don't want the content to be centered */
+
+.footerbar {
+    background-color: #222;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 15px 0px 15px 0px;
+    margin-top: 25px;
+    color: #9d9d9d;
+    height: 120px;
+}
+
+.footerbar-left {
+    width: 55%;
+}
+
+.footerbar-right {
+    width: 40%; 
+}
+
+.footerbar .footerbar-right,
+.footerbar .footerbar-left {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Contact Us styles */
+.contact-us-wrapper{
+    border: lightgrey;
+    border-width: 1px;
+    border-style: double;
+    padding: 10px;
+}
+
+.contact-us-l-section{
+    margin: auto 5px auto 0px;
+    display: inline-table;
+    width: 45%;
+}
+
+.contact-us-r-section{
+    margin: auto 0px auto 5px;
+    display: inline-table;
+    width: 45%;
+}
+/* CLASSES */

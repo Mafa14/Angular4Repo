@@ -1,0 +1,54 @@
+<div class="contact-us-l-section contact-us-wrapper">
+  <div>Contact Us</div>
+  <img src="../../images/close.png" />
+  <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit(contactUsForm.value)" [class.error]="!contactUsForm.valid && contactUsForm.touched">
+    <div class="row">
+      <div class="col-sm-12 margin-sm-t margin-sm-b" [class.has-error]="contactUsForm.controls['ContactName'].hasError('required') && contactUsForm.controls['ContactName'].touched">
+        <input class="form-control col-sm-3" type="text" placeholder="Your name" maxlength="200" [formControl]="contactUsForm.get('ContactName')"
+          [(ngModel)]="ContactName">
+        <span *ngIf="contactUsForm.controls['ContactName'].hasError('required') && contactUsForm.controls['ContactName'].touched">Name is required.</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 margin-sm-t margin-sm-b" [class.has-error]="contactUsForm.controls['ContactEmail'].hasError('required') && contactUsForm.controls['ContactEmail'].touched">
+        <input class="form-control" type="text" placeholder="Your email" maxlength="200" [formControl]="contactUsForm.get('ContactEmail')"
+          [(ngModel)]="ContactEmail">
+        <span *ngIf="contactUsForm.controls['ContactEmail'].hasError('required') && contactUsForm.controls['ContactEmail'].touched">Email is required.</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 margin-sm-t margin-sm-b" [class.has-error]="contactUsForm.controls['ContactMessage'].hasError('required') && contactUsForm.controls['ContactMessage'].touched">
+        <textarea class="form-control" type="text" placeholder="Write your message" maxlength="400" [formControl]="contactUsForm.get('ContactMessage')"
+          [(ngModel)]="ContactMessage"></textarea>
+        <span *ngIf="contactUsForm.controls['ContactMessage'].hasError('required') && contactUsForm.controls['ContactMessage'].touched">Message is required.</span>
+      </div>
+    </div>
+    <div class="margin-sm-b" *ngIf="success">
+      <p>Your message has been sent, thank you.</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button class="btn btn-primary pull-right" type="submit" [disabled]="!contactUsForm.valid">Send message</button>
+      </div>
+    </div>
+  </form>
+
+  <div *ngIf="process" style="text-align:center">
+    <img src="../../images/loader.png" />
+  </div>
+</div>
+
+<div class="contact-us-r-section">
+  <h2>Hello World!</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis libero magna, ut pretium lorem ultrices venenatis.
+    Curabitur id porttitor elit. Mauris tellus tellus, blandit in dolor eu, faucibus molestie quam. Nulla sed arcu a sapien
+    volutpat sodales eleifend vel ligula. Aenean pretium vel est et ornare. Suspendisse potenti. Vivamus consectetur velit
+    orci, ac tincidunt lacus sollicitudin ullamcorper. Phasellus ornare mauris nulla, eu lacinia enim facilisis quis. Aenean
+    viverra et ipsum at hendrerit. Vivamus congue velit nec porta dictum. Proin ut viverra diam. Aenean ultrices leo id euismod
+    mollis. Proin eget turpis porta, tristique ipsum sed, bibendum ex.</p>
+  <p>Suspendisse malesuada orci odio, nec tristique nulla congue ut. Vivamus dictum mauris orci, vel scelerisque magna hendrerit
+    eu. Aenean tincidunt imperdiet leo, sit amet iaculis ligula dapibus eu. Nulla elementum blandit dapibus. Nunc imperdiet
+    condimentum tempus. Fusce faucibus urna at justo tempus, ut consectetur elit sodales. Cras in quam quis dui rutrum efficitur.
+    Mauris et nibh ullamcorper, porttitor sem vel, congue velit. Phasellus non nibh eget nunc scelerisque suscipit. Duis
+    id venenatis quam.</p>
+</div>
